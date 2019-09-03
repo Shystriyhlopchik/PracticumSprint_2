@@ -1,0 +1,654 @@
+/*ниже ввели свойства для наглядного представления блока div*/
+/*div{
+    border: 1px solid red;
+}
+
+section{
+    border: 1px solid blue;
+}*/
+
+.page {
+    min-width: 1100px;
+    /* мы ещё не умеем делать мобильную версию сайта, */
+    /* поэтому выше установлена минимальная ширина страницы */
+    max-width: 1600px;
+    /* выше установили ограничение по максимальной ширине */
+    margin: 0 auto;
+    /* выше для экранов больше 1600px отцентрировали весь контент */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/*Блок header*/
+@keyframes rotation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.logo{
+    position: absolute;
+    width:183px;
+    height:32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+}
+
+.header {
+    height: 100vh;
+    min-height: 600px;
+    max-height: 756px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #F2F2F2;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    /* выше установили ограничения для секции */
+}
+
+.two-columns__main-text{
+    width: 80%;
+    min-width: 784px;
+}
+
+.header__link{
+    text-decoration: none;
+    opacity: 1.0;
+    transition: opacity 0.5s linear 1s;
+}
+
+.header__link:hover{
+    opacity: 0.4;
+}
+
+.header__logo-place{
+    position: absolute;
+    width:183px;
+    height:32px;
+    background-image:url(../images/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    top:30px;
+    left:64px;
+}
+
+.header__title {
+    font-weight: bold;
+}
+
+.header__title_main-item {
+    width:730px;
+    font-size: 102px;
+    line-height: 96px;
+    margin-left: 60px;
+}
+
+.header__subtitle{
+    position: absolute;
+    width:388px;
+    left:64px;
+    bottom:30px;
+    font-weight: normal;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+.header__main-illustration{
+    position: absolute;
+    width:765px;
+    height:608px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom:0px;
+    right: 0px;
+    z-index: 1;
+}
+
+.header__square-pic {
+    position:absolute;
+    height: 568px;
+    width: 568px;
+    background-color: #2F80ED;
+    top: 64px;
+    right: 0px;
+    transform: rotate(-15deg);
+    animation: rotation 20s linear infinite; 
+}
+/*Конец блка header*/
+
+/*Начало блока content*/
+.description{
+    display:flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+/*----------------------------------------------*/
+/*Описание стилей применяемы в блоке description*/
+.two-columns{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.two-columns__brief{
+    display:flex;
+    width:175px;
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+
+.two-columns__paragraph{
+    line-height: 34px;
+    font-size:24px;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    min-width: 784px;
+
+}
+
+.two-columns__span-accent{
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: bolder;
+}
+/*Конец описания стилей блока decription*/
+/*--------------------------------------*/
+/*-------------------------------------------*/
+/*Описание стилей применяемы в блоке technics*/
+.technics{
+    margin-top: 100px;
+}
+
+.section-title{
+    line-height: 1.15;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.section-title__position{
+    margin: 0px auto 0px auto;
+    text-align: center;
+    width: 60%;
+}
+
+.section-subtitle{
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.section-subtitle__position{
+    margin: 20px auto 0px auto;
+    width: 60%;
+    text-align: center;
+}
+
+.cards{
+    display: grid;
+    margin: 0px auto 0px auto;
+    width: 64%;
+    grid-template-columns: repeat(auto-fill, 240px);
+    grid-column-gap: 100px;
+}
+
+.cards__item{
+    width:240px;
+    margin-top:60px;
+    position: relative;
+}
+
+.cards__item :last-of-type{
+    margin-right: 0;
+}
+
+.cards__test{
+    align-self: center;
+    background-color: #2F80ED;
+}
+
+
+.cards__image{
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+    margin: 0px 40px 0px 40px;
+}
+
+.cards__title{
+    text-align: center;
+    margin-top: 43px;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cards__descriptions{
+    margin-top: 16px;
+    margin-bottom: 0px;
+    text-align: center;
+    line-height: 23px;
+    font-size: 18px;
+    font-weight: normal;
+}
+/*Конец описания стилей блока technics*/
+/*------------------------------------*/
+/*-------------------------------------------*/
+/*Описание стилей применяемы в блоке video*/
+.video{
+    margin-top: 100px;
+}
+
+.video__iframes{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: -50px;
+}
+
+.video__iframe{
+    width: 515px;
+    height: 316px;
+    margin-right: 20px;
+}
+/*Конец описания стилей блока video*/
+/*------------------------------------*/
+
+.oakley{
+    padding-top: 160px;
+    background-color: #F2F2F2;
+}
+
+.two-columns{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: 0px auto 0px auto;
+}
+
+.two-columns__brief{
+    display:flex;
+    width:175px;
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.two-columns__paragraph{
+    line-height: 34px;
+    font-size:24px;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*-----------------------------------------*/
+/*Описание стилей применяемы в блоке feinman*/
+.feinman{
+    position: relative;
+    display: flex;
+    height:790px;
+    padding-top: 80px;
+    background: url("../images/feinman.png") left bottom;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    background-color: #F2F2F2;
+}
+
+.feinman__title{
+    width:648px;
+    margin: 0px auto 0px auto;
+    text-align: center;
+    line-height: 1.15;
+    font-size: 120px;
+    font-weight: bold;
+}
+
+.feinman__subtitle{
+    margin: 70px auto 0px auto;
+    line-height: 51px;
+    font-size: 36px;
+    font-weight: normal;
+}
+
+.feinman__link{
+    position: absolute;
+    right: 48px;
+    top: 50%;
+    line-height: 51px;
+    font-size: 36px;
+    font-weight: normal;
+    text-decoration: none;
+    color:black;
+}
+/*Конец описания стилей блока feinman*/
+/*----------------------------------*/
+/*-----------------------------------------*/
+/*Описание стилей применяемы в блоке digits*/
+.digits{
+    margin-top: 100px;
+}
+
+.section-title{
+    margin-top: 0px;
+    margin-bottom:20px;
+    line-height: 69px;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.section-subtitle{
+    margin-bottom: 0px;
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+/*Ниже описан стиль для section-title и section-subtitle*/
+.section-title_align-header{
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-subtitle_align-header{
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table{
+    display:flex;
+    flex-wrap: wrap;
+    margin: 0px auto 0px auto;
+    width:1100px;
+    justify-content: space-between;
+}
+
+.table__cell{
+    width: 250px;
+    margin-top: 60px;
+}
+
+.table__heading{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.table__text_bottom-top{
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.table__text{
+    line-height: 1.2;
+    font-size:18px;
+    font-weight: normal;
+}
+/*Конец описания стилей блока deigits*/
+/*----------------------------------*/
+/*-----------------------------------------*/
+/*Описание стилей применяемы в блоке khan*/
+.khan{
+    margin-top: 100px;
+    padding-top: 105px;
+    background-color: #F2F2F2;
+    /*border: 1px solid red;*/
+}
+
+.khan__container{
+    margin: 0 auto 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.khan__author{
+    margin-top: 0px;
+    line-height: 42px;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.khan__title{
+    margin-top: 0px;
+    line-height: 1.15;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.khan__quote{
+    width:790px;
+    margin-top: 50px;
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.khan__quote-author{
+    margin-top: 36px;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.khan__quote-author-subline{
+    margin-top: 10px;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.khan__book-container{
+    margin-top: 68px;
+    display: flex;
+}
+
+.khan__book-pic{
+    width: 620px;
+    height: 608px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.khan__book-link{
+    line-height: 42px;
+    font-size: 30px;
+    font-weight: normal;
+}
+/*Конец описания стилей блока khan*/
+/*----------------------------------*/
+/*-----------------------------------------*/
+/*Описание стилей применяемы в блоке kaufman*/
+.kaufman{
+    /* border: 1px solid blue;*/
+     background-color:#000000;
+     color: white;
+     overflow:hidden;
+     position: relative;
+ }
+ 
+ .section-title_theme_dark{
+    /* border: 1px solid red;*/
+     width: 60%;
+     text-align: center;
+     margin: 90px auto 0px auto;
+     line-height: 69px;
+     font-size: 60px;
+     font-weight: bold;
+ }
+ 
+ .section-subtitle_theme_dark{
+     /*border: 1px solid red;*/
+     width: 60%;
+     margin-top: 20px;
+     text-align: center;
+     margin: 20px auto 0px auto;
+     line-height: 34px;
+     font-size: 24px;
+     font-weight: normal;
+ }
+ 
+ .table_theme_dark{
+     display:flex;
+     width: 1100px;
+     margin: 0 auto 90px auto;
+     flex-wrap: wrap;
+     justify-content: space-between;
+ }
+ 
+ .table__cell_theme_dark{
+     margin-top:80px;
+     width:200px;
+     z-index: 1;
+ }
+ 
+ .table__heading_theme_dark{
+     line-height: 1.15;
+     font-size: 24px;
+     font-weight: bolder;
+ }
+ 
+ .table__text_theme_dark{
+     margin-top: 20px;
+     line-height: 1.2;
+     font-size: 18px;
+     font-weight: normal;
+ }
+ 
+ .kaufman__triangl{
+     background-image: url(../images/triangle.svg);
+     width: 877px;
+     height: 877px;
+     background-size: contain;
+     background-repeat: no-repeat;
+     position: absolute;
+     right: -210px;
+     top: 0px;
+     animation: rotation 20s linear infinite; 
+ }
+ /*Конец описания стилей блока kaufman*/
+ /*----------------------------------*/
+ /*-----------------------------------------*/
+/*Описание стилей применяемы в блоке resources*/
+.resources{
+    margin-top: 100px;
+    margin-bottom: 217px;
+    display: flex;
+    flex-direction: column;
+}
+
+.resources__title-position{
+    width: 60%;
+    text-align: center;
+    margin: 0px auto 0px auto;
+}
+
+.resources__subtitle-position{
+    width: 60%;
+    text-align: center;
+    margin: 20px auto 0px auto;
+}
+
+.resources__logo-zone{
+    width:1100px;
+    margin: 80px auto 0px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.resources__logo{
+    width: 270px;
+    height: 38px;
+}
+ /*Конец описания стилей блока resources*/
+ /*----------------------------------*/
+ /*-----------------------------------------*/
+/*Описание стилей применяемы в блоке footer*/
+.footer{
+    display: flex;
+    min-height: 350px;
+    background-color:#000000;
+    color:white;
+}
+
+.footer__columns{
+    display:flex;
+    width:90%;
+    margin:60px auto 40px auto;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo_place_footer{
+    background-image:url(../images/logo_white.svg);
+}
+
+.footer__column-links{
+    list-style-type: none;
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+    line-height: 30px; 
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.footer__column-heading{
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.footer__column-social_heading{
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.footer__column_content_copyright{
+    flex-basis: 711px;
+}
+
+.footer__autor{
+    position:absolute;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    bottom: 0px;
+    left: 0px;
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.footer__column_none-decoration{
+    text-decoration: none;
+    color:white;
+}
+
+.social__icons{
+    width:16px;
+    height: 16px;
+    margin-left:0px;
+}
+ /*Конец описания стилей блока footer*/
+ /*----------------------------------*/
+/*Конец блока content*/
