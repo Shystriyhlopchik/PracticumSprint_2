@@ -1,4 +1,4 @@
-# Научиться учиться
+# Научиться_учиться
 ## RU
 
 _v0.0.2 - Версия с исправленным Readme._
@@ -23,4 +23,4 @@ https://shystriyhlopchik.github.io/PracticumSprint_2/
 + GitHub Pages
 .
 
-[To top/Наверх](#Научиться)
+[To top/Наверх](#Научиться_учиться)
