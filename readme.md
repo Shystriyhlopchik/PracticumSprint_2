@@ -23,4 +23,4 @@ https://shystriyhlopchik.github.io/PracticumSprint_2/
 + GitHub Pages
 .
 
-[To top/Наверх](#Научиться учиться)
+[To top/Наверх](#Научиться)
